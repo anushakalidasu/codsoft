@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anusha Kalidasu - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #007acc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .profile-section {
+            text-align: center;
+            padding: 20px;
+            background: #e0f7fa;
+            border-radius: 8px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #007acc;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .profile-section img.enlarge {
+            transform: scale(2);
+        }
+        button {
+            background: #ff6600;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .project-img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #cc5500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HELLO, I'M ANUSHA KALIDASU</h1>
+        <nav>
+            <ul>
+                <li><a href="#about" class="scroll-link">About</a></li>
+                <li><a href="#skills" class="scroll-link">Skills</a></li>
+                <li><a href="#contact" class="scroll-link">Contact Details</a></li>
+            </ul>
+        </nav>
+        <a href="img/resume.pdf" download>
+            <button id="download-cv">Download CV</button>
+        </a>
+    </header>
+    
+    <section class="profile-section">
+        <img src="img/profile.jpg" alt="Profile Photo" id="profile-img">
+        <h2>Anusha Kalidasu</h2>
+        <p>Web Developer | Full-Stack Enthusiast</p>
+    </section>
+    
+    <section id="about">
+        <h2>About</h2>
+        <p>"I am Anusha Kalidasu, a passionate and detail-oriented web developer with a strong foundation in full-stack development. With expertise in HTML, CSS, JavaScript, and backend technologies, I enjoy building dynamic and interactive web applications. My goal is to create seamless digital experiences that solve real-world problems. A lifelong learner, I continuously explore new technologies to enhance my skills. Beyond coding, I am a strong communicator and team player, always eager to collaborate and innovate."</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Full-Stack Web Development (HTML, CSS, JavaScript, Node.js, Express, MongoDB, SQL)</li>
+            <li>Frontend Technologies (React.js, Bootstrap, Tailwind CSS)</li>
+            <li>Backend Development (Node.js, Express.js, REST APIs)</li>
+            <li>Version Control (Git, GitHub)</li>
+            <li>Strong Communication & Teamwork</li>
+            <li>Leadership & Project Management</li>
+            <li>Quick Learning & Adaptability</li>
+            <li>Problem-Solving & Analytical Thinking</li>
+        </ul>
+    </section>
+    
+    <section id="projects">
+        
+        <h2>Project Details</h2>
+        <h3>GoConnect</h3>
+        <p>A connectivity platform that bridges the gap between alumni and students, providing mentorship, career guidance, and networking opportunities.</p>
+        <img src="img/goconnect.jpeg" alt="GoConnect Project" class="project-img">
+        
+        <img src="img/go4.jpeg" alt="GoConnect Project" class="project-img">
+
+        
+        <h3>Portfolio Builder</h3>
+        <p>A website that generates professional portfolios by taking user data as input in a structured format.</p>
+        <img src="img/port1.jpeg" alt="Portfolio Builder Project" class="project-img">
+        <img src="img/port2.jpeg" alt="Portfolio Builder Project" class="project-img">
+ 
+    
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Details</h2>
+        <p>  Email: <a href="mailto:anushakalidasu123@gamil.com">anushakalidasu123@gamil.com</a>
+        </p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/anusha-kalidasu-486825312/ target">My Profile</a></p>
+    </section>
+    
+    <script>
+        document.getElementById("profile-img").addEventListener("click", function() {
+            this.classList.toggle("enlarge");
+        });
+        
+        document.querySelectorAll(".scroll-link").forEach(anchor => {
+            anchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+</body>
+</html>
